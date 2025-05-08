@@ -5,7 +5,7 @@ const state = {
       group_buying_id: 0,
       product_name: "香帥芋泥蛋糕",
       price: 250,
-      product_picture: none,
+      product_picture: null,
       statement_date: new Date(),
       unit: "個",
     },
@@ -13,7 +13,7 @@ const state = {
       group_buying_id: 1,
       product_name: "保溫壺",
       price: 300,
-      product_picture: none,
+      product_picture: null,
       statement_date: new Date(),
       unit: "個",
     }
