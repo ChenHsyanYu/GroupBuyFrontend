@@ -1,6 +1,6 @@
 module.exports = {
   devServer: {
-    allowedHosts:'all',
+    // allowedHosts:'all',
     https: true,
     proxy: {
       "/api": {
@@ -11,5 +11,5 @@ module.exports = {
     
   },
    
-  publicPath: "/Gogroupbuy/",
+  // publicPath: "/Gogroupbuy/",
 };
