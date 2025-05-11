@@ -1,4 +1,5 @@
 import { formatOrder, changeDate } from "../utils";
+const API_BASE = process.env.API_BASE;
 const state = {
   items: [
     {
@@ -125,7 +126,7 @@ const mutations = {
 
 const actions = {
   async fetchItems({ commit, state }) {
-    const response = await fetch(`/api/product`, {
+    const response = await fetch(`${API_BASE}/product`, {
       headers: {
         Authorization: `Bearer ${state.token}`,
       },
@@ -135,7 +136,7 @@ const actions = {
   },
 
   async fetchOrders({ commit, state }) {
-    const response = await fetch(`/api/order/${state.userID}`, {
+    const response = await fetch(`${API_BASE}/order/${state.userID}`, {
       headers: {
         Authorization: `Bearer ${state.token}`,
       },
@@ -146,7 +147,7 @@ const actions = {
 
 
   async fetchToken({ commit, state }) {
-    const response = await fetch(`/api/user`, {
+    const response = await fetch(`${API_BASE}/user`, {
       method: "POST",
       headers: {
         "ngrok-skip-browser-warning": "69420",

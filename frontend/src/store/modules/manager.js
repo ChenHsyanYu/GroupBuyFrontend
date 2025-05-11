@@ -1,5 +1,5 @@
 import { formatOrder, formatItem } from "../utils";
-
+const API_BASE = process.env.API_BASE;
 const state = {
   storeID: "sdf",
   userID: "U026def3d18d5a00766ece3255e9eccf8",
@@ -71,7 +71,7 @@ const mutations = {
 
 const actions = {
   async fetchItems({ commit, state }) {
-    const response = await fetch(`/api/product`, {
+    const response = await fetch(`${API_BASE}/product`, {
       headers: {
         Authorization: `Bearer ${state.token}`,
       },
@@ -82,7 +82,7 @@ const actions = {
   },
   
   async fetchUnloadItems({ commit, state }) {
-    const response = await fetch(`/api/product/product_name`, {
+    const response = await fetch(`${API_BASE}/product/product_name`, {
       headers: {
         Authorization: `Bearer ${state.token}`,
       },
@@ -92,7 +92,7 @@ const actions = {
   },
 
   async fetchOrders({ commit, state }) {
-    const response = await fetch(`/api/order`, {
+    const response = await fetch(`${API_BASE}/order`, {
       headers: {
         Authorization: `Bearer ${state.token}`,
       },
@@ -104,7 +104,7 @@ const actions = {
   },
 
   async fetchToken({ commit, state }) {
-    const response = await fetch(`/api/user`, {
+    const response = await fetch(`${API_BASE}/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
