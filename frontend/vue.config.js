@@ -4,7 +4,7 @@ module.exports = {
     https: true,
     proxy: {
       "/api": {
-        target: "https://wangpython.pythonanywhere.com/",
+        target: "https://go-buy.onrender.com/",
         changeOrigin: true,
       },
     },
