@@ -1,5 +1,5 @@
 import { formatOrder, changeDate } from "../utils";
-const API_BASE = process.env.API_BASE;
+const API_BASE = process.env.VUE_APP_API_BASE;
 const state = {
   items: [
     {

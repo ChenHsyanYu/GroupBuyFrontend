@@ -1,5 +1,5 @@
 import { formatOrder, formatItem } from "../utils";
-const API_BASE = process.env.API_BASE;
+const API_BASE = process.env.VUE_APP_API_BASE;
 const state = {
   storeID: "sdf",
   userID: "U026def3d18d5a00766ece3255e9eccf8",
