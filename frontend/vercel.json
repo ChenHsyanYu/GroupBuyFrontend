@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://go-buy.onrender.com/"
+      "destination": "https://go-buy.onrender.com/$1"
     }
   ]
 }
